@@ -1,89 +1,154 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- Sets character encoding for proper text rendering -->
     <meta charset="UTF-8">
+    <!-- Ensures responsive scaling on mobile devices -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Albatoters — Featured Artists</title>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+    <!-- Links this HTML file to our dedicated CSS stylesheet -->
+    <link rel="stylesheet" href="artist.css">
 </head>
 <body>
 
+    <!-- Main wrapper div: Centers all content and sets the maximum width -->
     <div class="page-container">
         
-        <!-- Top Navigation Header -->
-        <header class="navbar">
+        <!-- NAVIGATION BAR: Holds the brand title and page links -->
+        <div class="navbar">
             <div class="logo">
                 <span class="music-note">♫</span> ALBATOTERS
             </div>
-            <nav class="nav-links">
+            <div class="nav-links">
                 <a href="index.html">HOME</a>
                 <a href="#">MOOD MATCH</a>
                 <a href="artists.html" class="active">ARTISTS</a>
                 <a href="#">VLOG</a>
                 <a href="#">ABOUT</a>
-            </nav>
-        </header>
+            </div>
+        </div>
 
-        <!-- Featured Artists Section -->
-        <section class="section-block">
-            <h2 class="section-title">03 | FEATURED ARTISTS</h2>
-            <div class="artists-split-grid">
+        <!-- MAIN CONTENT CONTAINER -->
+        <div class="content-wrapper">
+            
+            <!-- Page Heading -->
+            <div class="section-title">03 | FEATURED ARTISTS</div>
+            
+            <!-- ARTIST LIST CONTAINER: Holds all the artist cards vertically -->
+            <div class="artists-list">
                 
-                <!-- The Weeknd -->
-                <div class="artist-split-row">
-                    <div class="artist-left-box dark-indigo-bg">
+                <!-- ================= ARTIST 1: THE WEEKND ================= -->
+                <div class="artist-card">
+                    <!-- Left side box: Dark theme with artist name and image -->
+                    <div class="artist-left dark-indigo-bg">
                         <h3>THE WEEKND</h3>
-                        <div class="photo-area">[ PHOTO AREA ]</div>
+                        <div class="photo-container">
+                            <img src="Img For Artist/theweek.jpg" alt="The Weeknd" class="artist-photo">
+                        </div>
                     </div>
-                    <div class="artist-right-box">
-                        <p><strong>Vibe:</strong> Dark, cinematic, modern</p>
-                        <p><strong>Visual theme:</strong> Deep purple and black, city lights, night-drive stories.</p>
+                    <!-- Right side box: Vibe description and theme details (Strong tags removed) -->
+                    <div class="artist-right">
+                        <p>Vibe: Dark, cinematic, modern</p>
+                        <p>Visual theme: Deep purple and black, city lights, night-drive stories.</p>
                         <p class="suggestion">Suggested content: a short artist introduction, a favorite track or playlist link, and a personal reflection.</p>
                     </div>
                 </div>
 
-                <!-- Laufey -->
-                <div class="artist-split-row">
-                    <div class="artist-left-box mauve-bg">
+                <!-- ================= ARTIST 2: LAUFEY ================= -->
+                <div class="artist-card">
+                    <div class="artist-left mauve-bg">
                         <h3>LAUFEY</h3>
-                        <div class="photo-area">[ PHOTO AREA ]</div>
+                        <div class="photo-container">
+                            <img src="Img For Artist/Laufey.jpg" alt="Laufey" class="artist-photo">
+                        </div>
                     </div>
-                    <div class="artist-right-box">
-                        <p><strong>Vibe:</strong> Soft, vintage, elegant</p>
-                        <p><strong>Visual theme:</strong> Warm café tones, study diaries, quiet mornings, and soft listening notes.</p>
+                    <div class="artist-right">
+                        <p>Vibe: Soft, vintage, elegant</p>
+                        <p>Visual theme: Warm café tones, study diaries, quiet mornings, and soft listening notes.</p>
                         <p class="suggestion">Suggested content: a short artist introduction, a favorite track or playlist link, and a personal reflection.</p>
                     </div>
                 </div>
 
-                <!-- Bruno Mars -->
-                <div class="artist-split-row">
-                    <div class="artist-left-box terracotta-bg">
+                <!-- ================= ARTIST 3: BRUNO MARS ================= -->
+                <div class="artist-card">
+                    <div class="artist-left terracotta-bg">
                         <h3>BRUNO MARS</h3>
-                        <div class="photo-area">[ PHOTO AREA ]</div>
+                        <div class="photo-container">
+                            <img src="Img For Artist/Bruno.jpg" alt="Bruno Mars" class="artist-photo">
+                        </div>
                     </div>
-                    <div class="artist-right-box">
-                        <p><strong>Vibe:</strong> Fun, retro, energetic</p>
-                        <p><strong>Visual theme:</strong> Bold warm colors, retro shapes, friendship, travel, and upbeat memories.</p>
+                    <div class="artist-right">
+                        <p>Vibe: Fun, retro, energetic</p>
+                        <p>Visual theme: Bold warm colors, retro shapes, friendship, travel, and upbeat memories.</p>
                         <p class="suggestion">Suggested content: a short artist introduction, a favorite track or playlist link, and a personal reflection.</p>
                     </div>
                 </div>
 
-                <!-- Taylor Swift -->
-                <div class="artist-split-row">
-                    <div class="artist-left-box purple-bg">
+                <!-- ================= ARTIST 4: TAYLOR SWIFT ================= -->
+                <div class="artist-card">
+                    <div class="artist-left purple-bg">
                         <h3>TAYLOR SWIFT</h3>
-                        <div class="photo-area">[ PHOTO AREA ]</div>
+                        <div class="photo-container">
+                            <img src="Img For Artist/Taylor.jpg" alt="Taylor Swift" class="artist-photo">
+                        </div>
                     </div>
-                    <div class="artist-right-box">
-                        <p><strong>Vibe:</strong> Romantic, storytelling, colorful</p>
-                        <p><strong>Visual theme:</strong> Journal-style cards, pastel accents, personal memories, and story-based posts.</p>
+                    <div class="artist-right">
+                        <p>Vibe: Romantic, storytelling, colorful</p>
+                        <p>Visual theme: Journal-style cards, pastel accents, personal memories, and story-based posts.</p>
                         <p class="suggestion">Suggested content: a short artist introduction, a favorite track or playlist link, and a personal reflection.</p>
                     </div>
                 </div>
 
-                <!-- Joji -->
-                <div class="artist-split-row">
-                    <div class="artist-left-box charcoal-bg">
+                <!-- ================= ARTIST 5: JOJI ================= -->
+                <div class="artist-card">
+                    <div class="artist-left charcoal-bg">
                         <h3>JOJI</h3>
-                        <div class="photo-area">[ PHOTO
+                        <div class="photo-container">
+                            <img src="Img For Artist/Joji.jpg" alt="Joji" class="artist-photo">
+                        </div>
+                    </div>
+                    <div class="artist-right">
+                        <p>Vibe: Minimalist, moody, emotional</p>
+                        <p>Visual theme: Monochrome-inspired visuals, spacious layouts, and reflective writing.</p>
+                        <p class="suggestion">Suggested content: a short artist introduction, a favorite track or playlist link, and a personal reflection.</p>
+                    </div>
+                </div>
+
+                <!-- ================= ARTIST 6: ARTHUR NERY ================= -->
+                <div class="artist-card">
+                    <div class="artist-left teal-bg">
+                        <h3>ARTHUR NERY</h3>
+                        <div class="photo-container">
+                            <img src="Img For Artist/baiarthur.jpg" alt="Arthur Nery" class="artist-photo">
+                        </div>
+                    </div>
+                    <div class="artist-right">
+                        <p>Vibe: Smooth, romantic, Filipino R&B</p>
+                        <p>Visual theme: Cool teal and blue accents, OPM listening notes, and late-night moods.</p>
+                        <p class="suggestion">Suggested content: a short artist introduction, a favorite track or playlist link, and a personal reflection.</p>
+                    </div>
+                </div>
+
+                <!-- ================= ARTIST 7: DECEMBER AVENUE ================= -->
+                <div class="artist-card">
+                    <div class="artist-left sage-bg">
+                        <h3>DECEMBER AVENUE</h3>
+                        <div class="photo-container">
+                            <img src="Img For Artist/mgabai.jpg" alt="December Avenue" class="artist-photo">
+                        </div>
+                    </div>
+                    <div class="artist-right">
+                        <p>Vibe: Nostalgic, emotional, OPM</p>
+                        <p>Visual theme: Muted dusk colors, friendship memories, and meaningful life stories.</p>
+                        <p class="suggestion">Suggested content: a short artist introduction, a favorite track or playlist link, and a personal reflection.</p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+    </div>
+
+</body>
+</html>

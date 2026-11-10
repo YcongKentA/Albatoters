@@ -1,0 +1,117 @@
+:root {
+    --color-bg: #F7F7F2;          
+    --color-dark: #1b1b2f;        
+    --color-terracotta: #B85042;  
+    --color-purple: #5c4873;      
+    --color-mauve: #7a5c6d;       
+    --color-sage: #3f5449;        
+    --card-right-bg: #eef2f6;   
+    --text-light: #ffffff;        
+    --text-muted: #d1d5db;       
+    --max-width: 1100px;        
+}
+
+body {
+    font-family: sans-serif; 
+    background-color: var(--color-bg); 
+    padding: 2rem 1rem;
+}
+
+ * {
+    box-sizing: border-box; 
+    margin: 0;
+    padding: 0; 
+}
+
+body {
+    font-family: sans-serif; 
+    padding: 2rem 1rem;
+}
+
+/* Main container that hold everything sa website */
+.page-container {
+    max-width: var(--max-width);
+    margin: 0 auto;             
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+
+
+  /* navigation bar ni */
+.navbar {
+    background-color: var(--color-dark); 
+    color: var(--text-light);
+    display: flex;
+    justify-content: space-between;    /* para sa left ang text */
+   
+    padding: 1.25rem 2rem;
+   
+}
+
+ /* para sa navigation link text  */
+.nav-links {
+    display: flex;
+    gap: 1.75rem;
+    list-style: none;
+}
+ /* para sa navigation link text  */
+.nav-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    font-size: 0.8rem;
+    font-weight: 600;
+}
+
+/* para sa artist card and vertical layout and also sa gap for each box sa right*/
+.artists-list {
+    display: flex;
+    flex-direction: column; /* para vertical ang layout sa mga */
+    gap: 1rem; /* gap para kada artist list on the right box */
+}
+
+/* para sa artist card and gap sa center */
+.artist-card {
+    display: grid;
+    grid-template-columns: 1fr 1fr; 
+    gap: 0.5rem;
+
+}
+
+/* para sa right box color ug text ps. ayaw tang tanga ang padding para */
+.artist-left {
+    color: var(--text-light);
+    padding: 1.75rem;
+}
+
+/* para sa right box color ug text  */
+.artist-right {
+    background-color: var(--card-right-bg);  
+    padding: 1.5rem;
+}
+
+/* para sa photo container and image sizing sa box */
+.photo-container {
+    margin-top: 1rem;
+    width: 100%;
+    height: 110px;                
+    border-radius: 4px;             
+    overflow: hidden;               
+}
+
+.artist-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;              /*image size para ma fit ra tanan image sa right */
+    display: block;
+}
+
+/* Background color classes para artist left boxes */
+.dark-indigo-bg { background-color: var(--color-dark); }  /*The weekend bg color */
+.mauve-bg      { background-color: var(--color-mauve); } /*Laufey BG color */
+.terracotta-bg { background-color: var(--color-terracotta); } /* abai bruno bg color*/
+.purple-bg     { background-color: var(--color-purple); } /*manang taylor bg color */
+.charcoal-bg   { background-color: #2b2b3d; } /* bai joji bg color */
+.teal-bg       { background-color: #31585c; } /* bai nery bg color */
+.sage-bg       { background-color: var(--color-sage); } /* mga bai bg color*/
