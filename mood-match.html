@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Albatoters &mdash; soundtrack your story. A personal music vlog and listening journal." name="description"/>
+  <title>
+   Mood Match | Albatoters
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header class="header">
+   <a class="brand" href="index.html">
+    <span class="brand-mark">
+     ♫
+    </span>
+    ALBA
+    <span>
+     TOTERS
+    </span>
+   </a>
+   <nav class="nav" id="siteNav">
+    <a class="" href="index.html">
+     HOME
+    </a>
+    <a class="active" href="mood-match.html">
+     MOOD MATCH
+    </a>
+    <a class="" href="artist.html">
+     ARTISTS
+    </a>
+    <a class="" href="vlog.html">
+     MUSIC STORIES
+    </a>
+    <a class="" href="about.html">
+     ABOUT
+    </a>
+    <a class="" href="contact.html">
+     CONTACT
+    </a>
+   </nav>
+   <div class="header-actions">
+    <button aria-label="Toggle theme" class="icon-btn" id="themeToggle">
+     ☼
+    </button>
+    <button aria-label="Open navigation" class="menu-btn" id="menuToggle">
+     ☰
+    </button>
+   </div>
+  </header>
+  <main>
+   <section class="page-hero wrap">
+    <p class="eyebrow">
+     01 / MOOD MATCH
+    </p>
+    <h1 class="page-title">
+     Find your
+     <em>
+      frequency.
+     </em>
+    </h1>
+    <p class="lead">
+     Music can meet you where you are. Pick the mood that feels closest today and get a small artist recommendation to start your next listening session.
+    </p>
+   </section>
+   <section class="section">
+    <div class="wrap">
+     <div class="grid mood-grid">
+      <button class="mood-card" data-mood="night" id="mood-night">
+       <span class="mood-icon">
+        ☾
+       </span>
+       <b>
+        Midnight
+       </b>
+       <small>
+        Moody, cinematic and reflective
+       </small>
+      </button>
+      <button class="mood-card" data-mood="love" id="mood-love">
+       <span class="mood-icon">
+        ♡
+       </span>
+       <b>
+        In Love
+       </b>
+       <small>
+        Warm, romantic and heartfelt
+       </small>
+      </button>
+      <button class="mood-card" data-mood="energy" id="mood-energy">
+       <span class="mood-icon">
+        ✦
+       </span>
+       <b>
+        Good Vibes
+       </b>
+       <small>
+        Bright, playful and energetic
+       </small>
+      </button>
+      <button class="mood-card" data-mood="focus" id="mood-focus">
+       <span class="mood-icon">
+        ◎
+       </span>
+       <b>
+        Focus Mode
+       </b>
+       <small>
+        Steady, calm and intentional
+       </small>
+      </button>
+      <button class="mood-card" data-mood="calm" id="mood-calm">
+       <span class="mood-icon">
+        ☁
+       </span>
+       <b>
+        Unwind
+       </b>
+       <small>
+        Gentle, nostalgic and peaceful
+       </small>
+      </button>
+     </div>
+     <div class="panel" id="moodResult">
+      <p class="eyebrow">
+       YOUR LISTENING MATCH
+      </p>
+      <h2>
+       Choose a mood to begin.
+      </h2>
+      <p class="muted">
+       Your recommendations will appear here.
+      </p>
+     </div>
+     <script id="moodData" type="application/json">
+      {"night": {"name": "Midnight", "hint": "Moody, cinematic and reflective", "artists": ["The Weeknd", "Joji"], "desc": "For quiet rides, city lights, and thoughts after midnight."}, "love": {"name": "In Love", "hint": "Warm, romantic and heartfelt", "artists": ["Laufey", "Taylor Swift", "Arthur Nery"], "desc": "For soft moments, butterflies, and feelings you want to keep."}, "energy": {"name": "Good Vibes", "hint": "Bright, playful and energetic", "artists": ["Bruno Mars", "Taylor Swift"], "desc": "For a little confidence boost and a brighter day."}, "focus": {"name": "Focus Mode", "hint": "Steady, calm and intentional", "artists": ["Laufey", "Joji"], "desc": "For study sessions, creative work, and getting into your zone."}, "calm": {"name": "Unwind", "hint": "Gentle, nostalgic and peaceful", "artists": ["Laufey", "December Avenue"], "desc": "For slow mornings, quiet breaks, and a softer pace."}}
+     </script>
+    </div>
+   </section>
+  </main>
+  <footer class="footer wrap">
+   <span>
+    &copy; 2026 ALBATOTERS &middot; SOUNDTRACK YOUR STORY
+   </span>
+   <span>
+    Made for music, memories, and every mood.
+   </span>
+   <a href="contact.html">
+    GET IN TOUCH &nearrow;
+   </a>
+  </footer>
+  <div class="toast" id="toast" role="status">
+  </div>
+  <script src="script.js">
+  </script>
+ </body>
+</html>

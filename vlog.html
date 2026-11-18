@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+  <meta content="Albatoters &mdash; soundtrack your story. A personal music vlog and listening journal." name="description"/>
+  <title>
+   Music Stories | Albatoters
+  </title>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <header class="header">
+   <a class="brand" href="index.html">
+    <span class="brand-mark">
+     ♫
+    </span>
+    ALBA
+    <span>
+     TOTERS
+    </span>
+   </a>
+   <nav class="nav" id="siteNav">
+    <a class="" href="index.html">
+     HOME
+    </a>
+    <a class="" href="mood-match.html">
+     MOOD MATCH
+    </a>
+    <a class="" href="artist.html">
+     ARTISTS
+    </a>
+    <a class="active" href="vlog.html">
+     MUSIC STORIES
+    </a>
+    <a class="" href="about.html">
+     ABOUT
+    </a>
+    <a class="" href="contact.html">
+     CONTACT
+    </a>
+   </nav>
+   <div class="header-actions">
+    <button aria-label="Toggle theme" class="icon-btn" id="themeToggle">
+     ☼
+    </button>
+    <button aria-label="Open navigation" class="menu-btn" id="menuToggle">
+     ☰
+    </button>
+   </div>
+  </header>
+  <main>
+   <section class="page-hero wrap">
+    <p class="eyebrow">
+     03 / MUSIC STORIES
+    </p>
+    <h1 class="page-title">
+     Notes from the
+     <em>
+      playlist.
+     </em>
+    </h1>
+    <p class="lead">
+     Short reflections, listening diaries, and stories inspired by the songs that become part of our days.
+    </p>
+   </section>
+   <section class="section">
+    <div class="wrap">
+     <div class="toolbar chips">
+      <button class="chip active" data-filter="all">
+       ALL STORIES
+      </button>
+      <button class="chip" data-filter="mood">
+       MOOD
+      </button>
+      <button class="chip" data-filter="playlist">
+       PLAYLIST
+      </button>
+      <button class="chip" data-filter="opm">
+       OPM
+      </button>
+     </div>
+     <div class="grid story-grid" id="storyGrid">
+      <article class="story-card" data-category="listening notes">
+       <span class="type">
+        LISTENING NOTES
+       </span>
+       <h3>
+        Songs for a late-night ride
+       </h3>
+       <p>
+        Some songs feel different when the city gets quiet. This playlist is for long roads, window views, and thoughts you cannot quite explain.
+       </p>
+       <small>
+        ♫ The Weeknd &middot; Joji
+       </small>
+      </article>
+      <article class="story-card" data-category="personal playlist">
+       <span class="type">
+        PERSONAL PLAYLIST
+       </span>
+       <h3>
+        My comfort playlist
+       </h3>
+       <p>
+        A small collection of familiar sounds for slow mornings, busy afternoons, and days when you need a little reset.
+       </p>
+       <small>
+        ♫ Laufey &middot; Taylor Swift
+       </small>
+      </article>
+      <article class="story-card" data-category="opm corner">
+       <span class="type">
+        OPM CORNER
+       </span>
+       <h3>
+        Music that feels like home
+       </h3>
+       <p>
+        There is something special about hearing a Filipino song that puts a memory into words. These are the tracks I keep coming back to.
+       </p>
+       <small>
+        ♫ Arthur Nery &middot; December Avenue
+       </small>
+      </article>
+     </div>
+     <p class="empty hidden" id="storyEmpty">
+      No stories in this category yet.
+     </p>
+    </div>
+   </section>
+   <section class="section">
+    <div class="wrap">
+     <div class="content-card">
+      <p class="eyebrow">
+       YOUR TURN
+      </p>
+      <h2>
+       Every listener has a story.
+      </h2>
+      <p>
+       Save a personal listening note in your journal and build a collection of moments connected to music.
+      </p>
+      <a class="btn primary" href="about.html#journal">
+       OPEN THE LISTENING JOURNAL &nearrow;
+      </a>
+     </div>
+    </div>
+   </section>
+  </main>
+  <footer class="footer wrap">
+   <span>
+    &copy; 2026 ALBATOTERS &middot; SOUNDTRACK YOUR STORY
+   </span>
+   <span>
+    Made for music, memories, and every mood.
+   </span>
+   <a href="contact.html">
+    GET IN TOUCH &nearrow;
+   </a>
+  </footer>
+  <div class="toast" id="toast" role="status">
+  </div>
+  <script src="script.js">
+  </script>
+ </body>
+</html>

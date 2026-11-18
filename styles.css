@@ -1,0 +1,1291 @@
+
+/* ==========================================
+   ALBATOTERS
+   PERSONAL MUSIC VLOG WEBSITE
+   Main External CSS
+   ========================================== */
+
+
+/* ==========================================
+   1. GOOGLE FONTS
+   ========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+
+/* ==========================================
+   2. ROOT VARIABLES
+   ========================================== */
+
+:root {
+    --bg: #10121f;
+    --surface: #171a2a;
+    --surface2: #20243a;
+
+    --text: #f7f5ff;
+    --muted: #a4a6bd;
+
+    --line: rgba(255, 255, 255, 0.11);
+
+    --purple: #b6a0ff;
+    --teal: #8be3d2;
+    --pink: #ff9dc8;
+    --gold: #f6d88d;
+
+    --radius: 20px;
+
+    --shadow: 0 22px 65px #0004;
+
+    --font-main: "DM Sans", sans-serif;
+    --font-heading: "Space Grotesk", sans-serif;
+}
+
+
+/* ==========================================
+   3. LIGHT MODE VARIABLES
+   ========================================== */
+
+:root.light {
+    --bg: #f5f3fa;
+    --surface: #ffffff;
+    --surface2: #eeebf7;
+
+    --text: #202035;
+    --muted: #696980;
+
+    --line: rgba(32, 32, 53, 0.13);
+
+    --purple: #7254c9;
+    --teal: #167b70;
+    --pink: #b73c7d;
+    --gold: #8b6516;
+
+    --shadow: 0 22px 65px #30204a16;
+}
+
+
+/* ==========================================
+   4. GENERAL RESET
+   ========================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+
+    font-family: var(--font-main);
+    line-height: 1.65;
+
+    transition: background 0.3s ease,
+                color 0.3s ease;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+button,
+input,
+textarea,
+select {
+    font: inherit;
+}
+
+button {
+    color: inherit;
+    cursor: pointer;
+}
+
+img {
+    max-width: 100%;
+    display: block;
+}
+
+ul {
+    list-style-position: inside;
+}
+
+
+/* ==========================================
+   5. MAIN CONTAINER
+   ========================================== */
+
+.wrap {
+    width: min(1160px, calc(100% - 44px));
+    margin: 0 auto;
+}
+
+
+/* ==========================================
+   6. WEBSITE HEADER
+   ========================================== */
+
+.header {
+    height: 76px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 30;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 max(22px, calc((100vw - 1160px) / 2));
+
+    background: color-mix(
+        in srgb,
+        var(--bg) 90%,
+        transparent
+    );
+
+    backdrop-filter: blur(16px);
+
+    border-bottom: 1px solid var(--line);
+}
+
+
+/* ==========================================
+   7. WEBSITE BRAND
+   ========================================== */
+
+.brand {
+    font-family: var(--font-heading);
+    font-size: 15px;
+    font-weight: 700;
+
+    letter-spacing: 0.13em;
+
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.brand-mark {
+    width: 34px;
+    height: 34px;
+
+    display: grid;
+    place-items: center;
+
+    border-radius: 12px;
+
+    background: linear-gradient(
+        135deg,
+        var(--purple),
+        var(--teal)
+    );
+
+    color: #171326;
+    font-size: 20px;
+}
+
+.brand span:last-child {
+    color: var(--purple);
+}
+
+
+/* ==========================================
+   8. NAVIGATION MENU
+   ========================================== */
+
+.nav {
+    display: flex;
+    align-items: center;
+    gap: 25px;
+}
+
+.nav a {
+    font-size: 11px;
+    font-weight: 700;
+
+    letter-spacing: 0.07em;
+
+    color: var(--muted);
+
+    transition: color 0.3s ease;
+}
+
+.nav a:hover,
+.nav a.active {
+    color: var(--text);
+}
+
+.nav a.active::after {
+    content: "";
+
+    display: block;
+
+    height: 2px;
+
+    background: var(--purple);
+
+    margin-top: 5px;
+}
+
+
+/* ==========================================
+   9. HEADER BUTTONS
+   ========================================== */
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+}
+
+.icon-btn,
+.menu-btn {
+    width: 38px;
+    height: 38px;
+
+    border: 1px solid var(--line);
+
+    border-radius: 50%;
+
+    background: var(--surface);
+
+    cursor: pointer;
+}
+
+.icon-btn {
+    transition: background 0.3s ease;
+}
+
+.icon-btn:hover {
+    background: var(--surface2);
+}
+
+.menu-btn {
+    display: none;
+}
+
+
+/* ==========================================
+   10. HERO SECTION
+   ========================================== */
+
+.hero {
+    padding: 88px 0 76px;
+
+    display: grid;
+
+    grid-template-columns: 1.05fr 0.95fr;
+
+    align-items: center;
+
+    gap: 35px;
+
+    min-height: 520px;
+}
+
+.eyebrow {
+    color: var(--teal);
+
+    font-size: 10px;
+    font-weight: 700;
+
+    letter-spacing: 0.18em;
+
+    text-transform: uppercase;
+}
+
+.hero h1 {
+    font-family: var(--font-heading);
+
+    font-size: clamp(46px, 6vw, 76px);
+
+    font-weight: 600;
+
+    line-height: 1.04;
+
+    letter-spacing: -0.06em;
+
+    margin: 16px 0 22px;
+}
+
+.hero h1 em,
+.page-title em {
+    color: var(--purple);
+    font-style: normal;
+}
+
+.lead {
+    max-width: 540px;
+
+    color: var(--muted);
+
+    font-size: 15px;
+
+    line-height: 1.9;
+}
+
+
+/* ==========================================
+   11. HERO BUTTONS
+   ========================================== */
+
+.actions {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+    margin-top: 27px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    padding: 12px 19px;
+
+    border: 1px solid var(--line);
+
+    border-radius: 99px;
+
+    font-size: 11px;
+    font-weight: 700;
+
+    transition: transform 0.3s ease,
+                background 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn.primary {
+    background: var(--purple);
+
+    color: #171326;
+
+    border-color: var(--purple);
+}
+
+.btn.ghost {
+    background: transparent;
+
+    color: var(--text);
+}
+
+.btn.primary:hover {
+    background: var(--teal);
+    border-color: var(--teal);
+}
+
+
+/* ==========================================
+   12. HERO ARTWORK
+   ========================================== */
+
+.hero-art {
+    min-height: 350px;
+
+    display: grid;
+    place-items: center;
+
+    position: relative;
+}
+
+.record {
+    width: min(310px, 70vw);
+
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+
+    background: repeating-radial-gradient(
+        circle,
+        #151521 0 3px,
+        #302d43 4px 5px,
+        #171722 6px 8px
+    );
+
+    display: grid;
+    place-items: center;
+
+    box-shadow:
+        var(--shadow),
+        inset 0 0 0 1px #625b7b;
+
+    animation: float 7s ease-in-out infinite;
+}
+
+.record-label {
+    width: 34%;
+
+    aspect-ratio: 1;
+
+    border-radius: 50%;
+
+    background: linear-gradient(
+        135deg,
+        var(--purple),
+        #6957b2 60%,
+        var(--teal)
+    );
+
+    display: grid;
+    place-content: center;
+
+    text-align: center;
+
+    color: #171326;
+
+    font-family: var(--font-heading);
+    font-size: 25px;
+    font-weight: 700;
+}
+
+.record-label small {
+    font-family: var(--font-main);
+
+    font-size: 8px;
+    font-weight: 700;
+
+    letter-spacing: 0.15em;
+}
+
+
+/* ==========================================
+   13. HERO DECORATIONS
+   ========================================== */
+
+.orbit {
+    position: absolute;
+
+    border: 1px solid var(--line);
+
+    border-radius: 50%;
+
+    width: 95%;
+    height: 42%;
+
+    transform: rotate(-25deg);
+}
+
+.float-tag {
+    position: absolute;
+
+    background: var(--surface);
+
+    border: 1px solid var(--line);
+
+    padding: 10px 14px;
+
+    border-radius: 13px;
+
+    box-shadow: var(--shadow);
+
+    font-size: 11px;
+}
+
+.tag-one {
+    top: 18%;
+    right: 0;
+}
+
+.tag-two {
+    bottom: 15%;
+    left: 0;
+
+    color: var(--pink);
+}
+
+
+/* ==========================================
+   14. FLOATING ANIMATION
+   ========================================== */
+
+@keyframes float {
+    0% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(4deg);
+    }
+
+    100% {
+        transform: translateY(0);
+    }
+}
+
+
+/* ==========================================
+   15. GENERAL SECTIONS
+   ========================================== */
+
+.section {
+    padding: 70px 0;
+
+    border-top: 1px solid var(--line);
+}
+
+.section-head {
+    display: flex;
+
+    justify-content: space-between;
+    align-items: end;
+
+    gap: 20px;
+
+    margin-bottom: 27px;
+}
+
+.section-head h2,
+.page-title {
+    font-family: var(--font-heading);
+
+    font-size: clamp(32px, 4vw, 49px);
+
+    font-weight: 600;
+
+    line-height: 1.1;
+
+    letter-spacing: -0.05em;
+
+    margin: 8px 0;
+}
+
+.muted {
+    color: var(--muted);
+}
+
+
+/* ==========================================
+   16. GRID LAYOUT
+   ========================================== */
+
+.grid {
+    display: grid;
+    gap: 15px;
+}
+
+
+/* ==========================================
+   17. MOOD MATCH SECTION
+   ========================================== */
+
+.mood-grid {
+    grid-template-columns: repeat(5, 1fr);
+}
+
+.mood-card {
+    border: 1px solid var(--line);
+
+    background: var(--surface);
+
+    border-radius: 17px;
+
+    padding: 20px;
+
+    text-align: left;
+
+    cursor: pointer;
+
+    min-height: 145px;
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease,
+                background 0.3s ease;
+}
+
+.mood-card:hover,
+.mood-card.selected {
+    border-color: var(--purple);
+
+    transform: translateY(-4px);
+}
+
+.mood-icon {
+    font-size: 25px;
+
+    display: block;
+
+    margin-bottom: 16px;
+}
+
+.mood-card b,
+.mood-card small {
+    display: block;
+}
+
+.mood-card b {
+    font-size: 13px;
+}
+
+.mood-card small {
+    font-size: 10px;
+
+    color: var(--muted);
+}
+
+
+/* ==========================================
+   18. MOOD RESULT PANEL
+   ========================================== */
+
+.panel {
+    margin-top: 17px;
+
+    padding: 22px;
+
+    border: 1px solid var(--line);
+
+    border-radius: var(--radius);
+
+    background: var(--surface);
+}
+
+
+/* ==========================================
+   19. FEATURED ARTISTS
+   ========================================== */
+
+.artist-grid {
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.artist-card {
+    background: var(--surface);
+
+    border: 1px solid var(--line);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.artist-card:hover {
+    transform: translateY(-5px);
+
+    border-color: var(--purple);
+}
+
+.artist-card img {
+    width: 100%;
+    height: 205px;
+
+    object-fit: cover;
+
+    display: block;
+}
+
+.artist-info {
+    padding: 16px;
+}
+
+.artist-info h3 {
+    font-family: var(--font-heading);
+
+    font-size: 19px;
+
+    font-weight: 600;
+
+    margin: 0 0 4px;
+}
+
+.artist-info p {
+    font-size: 11px;
+
+    color: var(--muted);
+
+    margin: 0 0 12px;
+}
+
+.artist-info a {
+    color: var(--purple);
+
+    font-size: 10px;
+    font-weight: 700;
+}
+
+
+/* ==========================================
+   20. MUSIC STORIES / VLOG
+   ========================================== */
+
+.story-grid {
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.story-card {
+    padding: 21px;
+
+    min-height: 230px;
+
+    display: flex;
+    flex-direction: column;
+
+    background: var(--surface);
+
+    border: 1px solid var(--line);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    transition: transform 0.3s ease,
+                border-color 0.3s ease;
+}
+
+.story-card:hover {
+    transform: translateY(-4px);
+
+    border-color: var(--purple);
+}
+
+.story-card .type {
+    font-size: 9px;
+
+    color: var(--teal);
+
+    letter-spacing: 0.13em;
+
+    text-transform: uppercase;
+}
+
+.story-card h3 {
+    font-family: var(--font-heading);
+
+    font-size: 22px;
+
+    line-height: 1.2;
+
+    margin: 18px 0 10px;
+}
+
+.story-card p {
+    font-size: 12px;
+
+    color: var(--muted);
+
+    line-height: 1.8;
+}
+
+.story-card small {
+    margin-top: auto;
+
+    padding-top: 13px;
+
+    border-top: 1px solid var(--line);
+
+    color: var(--purple);
+
+    font-size: 10px;
+}
+
+
+/* ==========================================
+   21. PAGE HERO
+   ========================================== */
+
+.page-hero {
+    padding: 68px 0 38px;
+}
+
+.page-hero .lead {
+    max-width: 680px;
+}
+
+.page-title {
+    font-size: clamp(40px, 5vw, 62px);
+}
+
+
+/* ==========================================
+   22. SEARCH AND FILTER TOOLBAR
+   ========================================== */
+
+.toolbar {
+    display: flex;
+
+    gap: 10px;
+
+    flex-wrap: wrap;
+
+    align-items: center;
+
+    margin: 20px 0;
+}
+
+.field {
+    background: var(--surface);
+
+    color: var(--text);
+
+    border: 1px solid var(--line);
+
+    border-radius: 12px;
+
+    padding: 11px 13px;
+
+    outline: none;
+
+    min-width: 0;
+}
+
+.field:focus {
+    border-color: var(--purple);
+}
+
+.toolbar .field {
+    min-width: 220px;
+}
+
+
+/* ==========================================
+   23. CATEGORY FILTER CHIPS
+   ========================================== */
+
+.chips {
+    display: flex;
+
+    gap: 8px;
+
+    flex-wrap: wrap;
+}
+
+.chip {
+    border: 1px solid var(--line);
+
+    border-radius: 99px;
+
+    background: transparent;
+
+    padding: 8px 13px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+
+    cursor: pointer;
+
+    transition: background 0.3s ease,
+                color 0.3s ease;
+}
+
+.chip:hover,
+.chip.active {
+    background: var(--purple);
+
+    color: #171326;
+
+    border-color: var(--purple);
+}
+
+
+/* ==========================================
+   24. TWO COLUMN LAYOUT
+   ========================================== */
+
+.two-col {
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 30px;
+}
+
+
+/* ==========================================
+   25. CONTENT CARDS
+   ========================================== */
+
+.content-card {
+    background: var(--surface);
+
+    border: 1px solid var(--line);
+
+    border-radius: var(--radius);
+
+    padding: 25px;
+}
+
+.content-card h2 {
+    font-family: var(--font-heading);
+
+    font-size: 25px;
+}
+
+.content-card p,
+.content-card li {
+    color: var(--muted);
+
+    font-size: 13px;
+
+    line-height: 1.9;
+}
+
+
+/* ==========================================
+   26. FORMS
+   ========================================== */
+
+.form label {
+    display: block;
+
+    font-size: 11px;
+
+    font-weight: 700;
+
+    margin: 13px 0 6px;
+}
+
+.form .field {
+    width: 100%;
+}
+
+.form textarea {
+    min-height: 125px;
+
+    resize: vertical;
+}
+
+.form-note {
+    font-size: 11px;
+
+    color: var(--teal);
+
+    min-height: 18px;
+
+    margin-top: 10px;
+}
+
+
+/* ==========================================
+   27. JOURNAL ENTRIES
+   ========================================== */
+
+.entry {
+    padding: 15px;
+
+    border: 1px solid var(--line);
+
+    border-radius: 13px;
+
+    margin-top: 10px;
+
+    background: var(--surface);
+}
+
+.entry h4 {
+    margin: 0;
+
+    font-family: var(--font-heading);
+
+    font-size: 16px;
+    font-weight: 600;
+}
+
+.entry p {
+    white-space: pre-wrap;
+
+    overflow-wrap: anywhere;
+
+    color: var(--muted);
+}
+
+.entry button {
+    float: right;
+
+    border: 0;
+
+    background: none;
+
+    color: var(--pink);
+
+    cursor: pointer;
+}
+
+
+/* ==========================================
+   28. WEBSITE FOOTER
+   ========================================== */
+
+.footer {
+    margin-top: 60px;
+
+    border-top: 1px solid var(--line);
+
+    padding: 25px 0;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    color: var(--muted);
+
+    font-size: 10px;
+}
+
+.footer a {
+    color: var(--purple);
+}
+
+
+/* ==========================================
+   29. EMPTY STATE
+   ========================================== */
+
+.empty {
+    padding: 25px;
+
+    border: 1px dashed var(--line);
+
+    border-radius: 14px;
+
+    color: var(--muted);
+
+    font-size: 12px;
+
+    text-align: center;
+}
+
+
+/* ==========================================
+   30. HIDDEN ELEMENTS
+   ========================================== */
+
+.hidden {
+    display: none !important;
+}
+
+
+/* ==========================================
+   31. NOTIFICATION TOAST
+   ========================================== */
+
+.toast {
+    position: fixed;
+
+    bottom: 20px;
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    background: var(--text);
+
+    color: var(--bg);
+
+    padding: 10px 16px;
+
+    border-radius: 99px;
+
+    font-size: 11px;
+
+    opacity: 0;
+
+    pointer-events: none;
+
+    transition: opacity 0.3s ease;
+
+    z-index: 50;
+}
+
+.toast.show {
+    opacity: 1;
+}
+
+
+/* ==========================================
+   32. TABLET RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 900px) {
+
+    .nav {
+        gap: 13px;
+    }
+
+    .nav a {
+        font-size: 10px;
+    }
+
+    .mood-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    .artist-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+}
+
+
+/* ==========================================
+   33. MOBILE RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 700px) {
+
+    .header {
+        height: 68px;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .nav {
+        display: none;
+
+        position: absolute;
+
+        top: 67px;
+        left: 0;
+        right: 0;
+
+        background: var(--surface);
+
+        padding: 15px 24px 22px;
+
+        border-bottom: 1px solid var(--line);
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        gap: 4px;
+    }
+
+    .nav.open {
+        display: flex;
+    }
+
+    .nav a {
+        padding: 9px 0;
+
+        font-size: 12px;
+    }
+
+    .nav a.active::after {
+        display: none;
+    }
+
+    .hero {
+        grid-template-columns: 1fr;
+
+        padding: 60px 0 35px;
+
+        gap: 0;
+    }
+
+    .hero-art {
+        min-height: 300px;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .section-head {
+        align-items: flex-start;
+
+        flex-direction: column;
+    }
+
+    .mood-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .artist-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .artist-card img {
+        height: 160px;
+    }
+
+    .story-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .two-col {
+        grid-template-columns: 1fr;
+    }
+
+    .footer {
+        flex-direction: column;
+
+        text-align: center;
+    }
+
+    .page-hero {
+        padding: 52px 0 25px;
+    }
+
+}
+
+
+/* ==========================================
+   34. SMALL MOBILE RESPONSIVE DESIGN
+   ========================================== */
+
+@media (max-width: 390px) {
+
+    .wrap {
+        width: calc(100% - 30px);
+    }
+
+    .artist-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .artist-card img {
+        height: 210px;
+    }
+
+    .mood-card {
+        padding: 15px;
+    }
+
+}
+
+
+/* ==========================================
+   35. ACCESSIBILITY
+   ========================================== */
+
+:focus-visible {
+    outline: 2px solid var(--teal);
+
+    outline-offset: 4px;
+}
+
+
+/* ==========================================
+   36. REDUCED MOTION
+   ========================================== */
+
+@media (prefers-reduced-motion: reduce) {
+
+    * {
+        scroll-behavior: auto !important;
+
+        animation: none !important;
+
+        transition: none !important;
+    }
+
+}
